@@ -13,6 +13,6 @@ public class WordRecommender {
       // TODO: change this!
       return null;
     }
-  making changes to commit
+  // making changes to commit
     // You can of course write other methods as well.
   }
