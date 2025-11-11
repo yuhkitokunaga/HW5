@@ -18,7 +18,7 @@ public class WordRecommender {
         }
         sc.close();
     }
-    // Calculate IF %  of characters in common are at least 50%
+    // they have to be able to Calculate IF %  of characters in common are at least 50%
     // similarity should be close to .length of word, NVM
 
 
