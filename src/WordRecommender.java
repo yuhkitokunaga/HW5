@@ -19,7 +19,7 @@ public class WordRecommender {
         sc.close();
     }
     // they have to be able to Calculate IF %  of characters in common are at least 50%
-    // similarity should be close to .length of word, NVM
+    // thr similarity should be close to .length of word, NVM
 
 
     public ArrayList<String> getWordSuggestions(String word,
