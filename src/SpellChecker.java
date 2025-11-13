@@ -52,7 +52,6 @@ public class SpellChecker {
                 word = word.trim();
                 if (!word.isEmpty()) {
                     dictionary.add(word);
-
                 }
             }
         } catch (FileNotFoundException e) {
