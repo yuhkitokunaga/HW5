@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
             @BeforeEach
             void setUp() throws FileNotFoundException {
-                wr = new WordRecommender(DICT_PATH);
+                wr = new WordRecommender(dictionaryfile);
             }
 
             @Test
