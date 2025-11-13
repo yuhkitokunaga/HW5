@@ -35,7 +35,7 @@ public class SpellChecker {
             File x = new File(fileName);
 
             if (x.exists()) {
-                System.out.printf(Util.DICTIONARY_SUCCESS_NOTIFICATION);
+                System.out.printf(Util.DICTIONARY_SUCCESS_NOTIFICATION, fileName);
                 return fileName;
             } else {
                 System.out.printf(Util.FILE_OPENING_ERROR);
@@ -46,8 +46,7 @@ public class SpellChecker {
     private void loadDict(String fileName) {
         File dictFile = new File(fileName);
 
-        try {
-            Scanner fileReader = new Scanner(dictFile);
+        try (Scanner fileReader = new Scanner(dictFile)) {
             while (fileReader.hasNextLine()) {
                 String word = fileReader.nextLine();
                 word = word.trim();
@@ -69,7 +68,7 @@ public class SpellChecker {
             File inputFile = new File(fileName);
             if (inputFile.exists()) {
                 String outputName = makeOutputName(fileName);
-                System.out.printf(Util.FILE_SUCCESS_NOTIFICATION);
+                System.out.printf(Util.FILE_SUCCESS_NOTIFICATION, fileName, outputName);
                 return fileName;
             } else {
                 System.out.printf(Util.FILE_OPENING_ERROR);
