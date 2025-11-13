@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
             }
 
             @Test
-            void getSimilarity_identicalWords_fullLength() {
+            void getSimilaritySameWord() {
                 double actual = wr.getSimilarity("cat", "cat");
                 assertEquals(3.0, actual, 1e-6);
             }
