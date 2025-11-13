@@ -22,7 +22,12 @@ public class SpellChecker {
     public void start() {
         String dictFileName = promptDictionary();
         loadDict(dictFileName);
-        recommender = new WordRecommender(dictFileName);
+        try {
+            recommender = new WordRecommender(dictFileName);
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: Could not open dictionary file " + dictFileName);
+            return;
+        }
         String inputFileName = promptForInput();
         spellCheck(inputFileName);
         inputReader.close();  // DO NOT MODIFY - must be the last line of this method!
